@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import FloatingMascot from './components/FloatingMascot'
+import { PixelRobot, PixelGhost, PixelStar, PixelComputer } from './components/PixelMascots'
 import GridBackground from './components/GridBackground'
 import HeroSection from './components/HeroSection'
 import AboutSection from './components/AboutSection'
@@ -16,27 +17,27 @@ function App() {
     <div className="min-h-screen relative overflow-hidden">
       <GridBackground />
 
-      {/* Floating mascot characters */}
+      {/* Floating pixel art mascot characters */}
       <FloatingMascot
-        emoji="🤖"
+        MascotComponent={PixelRobot}
         delay={0}
         startX={10}
         startY={20}
       />
       <FloatingMascot
-        emoji="⚡"
+        MascotComponent={PixelComputer}
         delay={1}
         startX={85}
         startY={30}
       />
       <FloatingMascot
-        emoji="🔮"
+        MascotComponent={PixelGhost}
         delay={2}
         startX={15}
         startY={70}
       />
       <FloatingMascot
-        emoji="✨"
+        MascotComponent={PixelStar}
         delay={1.5}
         startX={90}
         startY={80}
