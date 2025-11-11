@@ -36,7 +36,7 @@ const FloatingMascot = ({
 
   return (
     <div
-      className="fixed pointer-events-none z-0 transition-all duration-[4000ms] ease-in-out"
+      className="fixed pointer-events-none z-0 transition-all duration-2000 ease-in-out"
       style={{
         left: `${position.x}%`,
         top: `${position.y}%`,

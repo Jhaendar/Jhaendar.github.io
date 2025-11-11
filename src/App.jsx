@@ -25,7 +25,7 @@ function App() {
 
       {/* Floating Takodachi mascots with unique personalities and drift patterns */}
       <FloatingMascot
-        MascotComponent={PixelTakodachi}
+        MascotComponent={PixelRobot}
         delay={0}
         startX={10}
         startY={20}
