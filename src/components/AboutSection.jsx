@@ -31,7 +31,7 @@ const AboutSection = () => {
 
             <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
               <p className="border-l-4 border-cyber-purple pl-4 py-2 bg-dark-surface/50 rounded">
-                I'm a <span className="text-cyber-purple-light font-semibold">Registered Electrical Engineer</span> from
+                I'm a <span className="text-cyber-purple-light font-semibold">Licensed Registered Electrical Engineer</span> from
                 the Philippines, bringing a unique blend of electrical engineering fundamentals and
                 cutting-edge AI/ML expertise.
               </p>
@@ -51,7 +51,7 @@ const AboutSection = () => {
             {/* Stats or highlights */}
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="bg-dark-surface border border-cyber-purple/30 rounded-lg p-4 hover:border-cyber-purple transition-colors">
-                <div className="text-3xl font-bold text-cyber-purple-light">REE</div>
+                <div className="text-3xl font-bold text-cyber-purple-light">PH</div>
                 <div className="text-sm text-gray-400">Licensed REE</div>
               </div>
               <div className="bg-dark-surface border border-cyber-purple/30 rounded-lg p-4 hover:border-cyber-purple transition-colors">
