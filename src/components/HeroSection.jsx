@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 const HeroSection = () => {
   const [textIndex, setTextIndex] = useState(0)
-  const titles = ['AI/ML Engineer']
+  const titles = ['AI/ML Engineer', 'Electrical Engineer', 'Tech Innovator']
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,7 +41,7 @@ const HeroSection = () => {
           <div className="space-y-2 text-lg sm:text-xl text-gray-400">
             <p className="flex items-center justify-center gap-2">
               <span className="text-cyber-purple">⚡</span>
-              Registered Electrical Engineer
+              Licensed Registered Electrical Engineer (PH)
             </p>
             <p className="flex items-center justify-center gap-2">
               <span className="text-cyber-purple">🎓</span>

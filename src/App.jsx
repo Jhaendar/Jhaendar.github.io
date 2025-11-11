@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import FloatingMascot from './components/FloatingMascot'
-import { PixelTakodachi } from './components/PixelMascots'
+import { PixelRobot, PixelGhost, PixelStar, PixelComputer } from './components/PixelMascots'
 import GridBackground from './components/GridBackground'
 import HeroSection from './components/HeroSection'
 import AboutSection from './components/AboutSection'
@@ -17,27 +17,27 @@ function App() {
     <div className="min-h-screen relative overflow-hidden">
       <GridBackground />
 
-      {/* Floating Takodachi mascots */}
+      {/* Floating pixel art mascot characters */}
       <FloatingMascot
-        MascotComponent={PixelTakodachi}
+        MascotComponent={PixelRobot}
         delay={0}
         startX={10}
         startY={20}
       />
       <FloatingMascot
-        MascotComponent={PixelTakodachi}
+        MascotComponent={PixelComputer}
         delay={1}
         startX={85}
         startY={30}
       />
       <FloatingMascot
-        MascotComponent={PixelTakodachi}
+        MascotComponent={PixelGhost}
         delay={2}
         startX={15}
         startY={70}
       />
       <FloatingMascot
-        MascotComponent={PixelTakodachi}
+        MascotComponent={PixelStar}
         delay={1.5}
         startX={90}
         startY={80}
