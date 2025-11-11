@@ -1,20 +1,38 @@
 import { useEffect, useState } from 'react'
 
-const FloatingMascot = ({ MascotComponent, delay = 0, startX = 50, startY = 50 }) => {
+const FloatingMascot = ({
+  MascotComponent,
+  delay = 0,
+  startX = 50,
+  startY = 50,
+  driftX = 0.3,  // Horizontal drift speed and direction (negative = left, positive = right)
+  driftY = 0.1   // Vertical drift speed and direction
+}) => {
   const [position, setPosition] = useState({ x: startX, y: startY })
   const [rotation, setRotation] = useState(0)
 
   useEffect(() => {
     const moveInterval = setInterval(() => {
-      setPosition(prev => ({
-        x: prev.x + (Math.random() - 0.5) * 2,
-        y: prev.y + (Math.random() - 0.5) * 2,
-      }))
-      setRotation(prev => prev + (Math.random() - 0.5) * 10)
-    }, 2000)
+      setPosition(prev => {
+        // Add sideways drift with wrapping
+        let newX = prev.x + driftX + (Math.random() - 0.5) * 0.5
+        let newY = prev.y + driftY + (Math.random() - 0.5) * 0.5
+
+        // Wrap around horizontally
+        if (newX > 100) newX = -5
+        if (newX < -5) newX = 100
+
+        // Wrap around vertically
+        if (newY > 100) newY = -5
+        if (newY < -5) newY = 100
+
+        return { x: newX, y: newY }
+      })
+      setRotation(prev => prev + (Math.random() - 0.5) * 3)
+    }, 4000)
 
     return () => clearInterval(moveInterval)
-  }, [])
+  }, [driftX, driftY])
 
   return (
     <div
